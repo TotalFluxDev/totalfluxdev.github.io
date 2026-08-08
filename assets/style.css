@@ -56,6 +56,16 @@ body {
   max-width: 760px;
 }
 
+.hero-content--centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content--centered .hero-tagline,
+.hero-content--centered .hero-description {
+  margin-inline: auto;
+}
+
 .hero-title {
   margin: 0;
   font-size: clamp(3.15rem, 8vw, 6rem);
@@ -117,6 +127,14 @@ body {
   max-width: 62ch;
 }
 
+.section-heading--centered {
+  text-align: center;
+}
+
+.section-heading--centered p {
+  margin-inline: auto;
+}
+
 .principles-grid {
   margin-top: 2rem;
   display: grid;
@@ -162,10 +180,19 @@ body {
   padding-top: 2.25rem;
 }
 
-.product-card {
+.products-layout {
   margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product-card {
+  margin-top: 0;
   padding: 2rem;
   max-width: 680px;
+  flex: 1 1 320px;
 }
 
 .product-card h3 {

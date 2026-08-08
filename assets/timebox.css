@@ -1,0 +1,364 @@
+/* TimeBox-specific styles only.
+   Keep shared typography, layout, and reusable components in assets/style.css. */
+
+.timebox-page {
+  --timebox-accent: #ff6b35;
+  --timebox-accent-soft: #ff8559;
+  --timebox-blue: #0c66f4;
+  --timebox-blue-ink: #0a49b5;
+  --timebox-ring: rgba(255, 107, 53, 0.36);
+  --timebox-nav-bg: rgba(255, 255, 255, 0.8);
+}
+
+.timebox-page {
+  background: radial-gradient(circle at top, #ffffff 0%, #f5f6f8 72%);
+}
+
+.timebox-page .timebox-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--timebox-nav-bg);
+  backdrop-filter: blur(7px);
+}
+
+.timebox-page .timebox-nav {
+  padding: 0.9rem 0;
+}
+
+.timebox-page .timebox-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timebox-page .timebox-nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 540;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.timebox-page .timebox-nav-link:hover,
+.timebox-page .timebox-nav-link:focus-visible {
+  color: var(--color-text-primary);
+  background: rgba(17, 24, 39, 0.05);
+}
+
+.timebox-page .timebox-nav-link[aria-current="page"] {
+  color: var(--timebox-accent);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.timebox-page .timebox-hero {
+  padding-top: clamp(3.2rem, 9vh, 5.8rem);
+}
+
+.timebox-page .timebox-hero-content {
+  max-width: 720px;
+}
+
+.timebox-page .timebox-kicker {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 620;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.timebox-page .timebox-kicker::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  background: var(--timebox-accent);
+  box-shadow: 0 0 0 0.22rem rgba(255, 107, 53, 0.16);
+}
+
+.timebox-page .timebox-wordmark {
+  color: var(--timebox-accent);
+}
+
+.timebox-page .timebox-cta-row {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.timebox-page .timebox-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.45rem;
+  border-radius: var(--radius-button);
+  border: 1px solid transparent;
+  font-size: 0.98rem;
+  font-weight: 560;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+    border-color var(--transition-base), background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.timebox-page .button-primary.timebox-button {
+  margin-top: 0;
+}
+
+.timebox-page .timebox-button--primary {
+  background: var(--timebox-accent);
+  border-color: var(--timebox-accent);
+  color: #ffffff;
+  box-shadow: 0 11px 24px rgba(255, 107, 53, 0.28);
+}
+
+.timebox-page .timebox-button--primary:hover,
+.timebox-page .timebox-button--primary:focus-visible {
+  background: #f45a22;
+  border-color: #f45a22;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(255, 107, 53, 0.3);
+}
+
+.timebox-page .timebox-button--secondary {
+  background: rgba(12, 102, 244, 0.08);
+  border-color: rgba(12, 102, 244, 0.2);
+  color: var(--timebox-blue-ink);
+}
+
+.timebox-page .timebox-button--secondary:hover,
+.timebox-page .timebox-button--secondary:focus-visible {
+  background: rgba(12, 102, 244, 0.16);
+  border-color: rgba(12, 102, 244, 0.34);
+  color: #083892;
+  transform: translateY(-1px);
+}
+
+.timebox-page .timebox-core-idea {
+  padding-top: clamp(2.8rem, 7vh, 4.1rem);
+}
+
+.timebox-page .timebox-core-idea .section-heading {
+  max-width: 860px;
+}
+
+.timebox-page .timebox-core-idea .section-heading p {
+  margin-top: 1.15rem;
+  font-size: 1.14rem;
+  color: #3f4957;
+}
+
+.timebox-page .timebox-value .section-heading {
+  max-width: 760px;
+}
+
+.timebox-page .timebox-value-rows {
+  margin-top: 2.35rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.timebox-page .timebox-value-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
+  gap: 1.3rem 3.5rem;
+  align-items: start;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timebox-page .timebox-value-row:nth-child(even) .timebox-value-intro {
+  grid-column: 2;
+}
+
+.timebox-page .timebox-value-row:nth-child(even) .timebox-value-solution {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.timebox-page .timebox-value-intro h3 {
+  margin: 0;
+  font-size: clamp(1.32rem, 2.8vw, 1.76rem);
+  letter-spacing: -0.02em;
+}
+
+.timebox-page .timebox-value-intro p {
+  margin: 0.8rem 0 0;
+  color: #404b5a;
+}
+
+.timebox-page .timebox-value-solution {
+  margin: 0;
+  max-width: 56ch;
+  color: var(--color-text-secondary);
+}
+
+.timebox-page .timebox-privacy {
+  padding-top: clamp(2.8rem, 7vh, 4.3rem);
+}
+
+.timebox-page .timebox-privacy-panel {
+  max-width: 880px;
+  padding: clamp(1.5rem, 3vw, 2.3rem);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius-card) + 4px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.timebox-page .timebox-privacy-panel h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  letter-spacing: -0.02em;
+}
+
+.timebox-page .timebox-privacy-panel p {
+  margin: 1rem 0 0;
+  color: var(--color-text-secondary);
+  max-width: 68ch;
+}
+
+.timebox-page .timebox-privacy-link {
+  margin-top: 1.35rem;
+  color: var(--timebox-accent);
+}
+
+.timebox-page .timebox-privacy-link:hover,
+.timebox-page .timebox-privacy-link:focus-visible {
+  color: #d74e1d;
+}
+
+.timebox-page .timebox-simplicity {
+  padding-top: clamp(3rem, 8vh, 4.6rem);
+}
+
+.timebox-page .timebox-simplicity .section-heading {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.timebox-page .timebox-simplicity .section-heading p {
+  margin-top: 1.05rem;
+}
+
+.timebox-page .timebox-final-cta {
+  padding-top: clamp(2.9rem, 7vh, 4.2rem);
+}
+
+.timebox-page .timebox-final-cta-panel {
+  max-width: 820px;
+  padding: clamp(1.7rem, 4vw, 2.8rem);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius-card) + 6px);
+  background: var(--color-surface);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.timebox-page .timebox-final-cta-panel h2 {
+  margin: 0;
+  font-size: clamp(1.92rem, 3.8vw, 2.8rem);
+  letter-spacing: -0.03em;
+}
+
+.timebox-page .timebox-final-cta-panel p {
+  margin: 0.95rem auto 0;
+  max-width: 54ch;
+  color: var(--color-text-secondary);
+}
+
+.timebox-page .timebox-final-cta-panel .timebox-button {
+  margin-top: 1.5rem;
+}
+
+.timebox-page a:focus-visible,
+.timebox-page button:focus-visible {
+  outline: 3px solid var(--timebox-ring);
+  outline-offset: 3px;
+}
+
+@media (max-width: 980px) {
+  .timebox-page .timebox-value-row,
+  .timebox-page .timebox-value-row:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .timebox-page .timebox-value-row:nth-child(even) .timebox-value-intro,
+  .timebox-page .timebox-value-row:nth-child(even) .timebox-value-solution {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .timebox-page .timebox-header {
+    position: static;
+    backdrop-filter: none;
+  }
+
+  .timebox-page .timebox-nav-list {
+    gap: 0.45rem;
+  }
+
+  .timebox-page .timebox-nav-link {
+    min-height: 2.1rem;
+    padding: 0.38rem 0.68rem;
+    font-size: 0.92rem;
+  }
+
+  .timebox-page .timebox-cta-row {
+    gap: 0.65rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timebox-page .timebox-hero {
+    padding-top: 2.7rem;
+  }
+
+  .timebox-page .timebox-cta-row {
+    margin-top: 1.75rem;
+  }
+
+  .timebox-page .timebox-button,
+  .timebox-page .timebox-button--secondary {
+    width: 100%;
+  }
+
+  .timebox-page .timebox-value-row {
+    padding: 1.65rem 0;
+  }
+
+  .timebox-page .timebox-core-idea .section-heading p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timebox-page *,
+  .timebox-page *::before,
+  .timebox-page *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

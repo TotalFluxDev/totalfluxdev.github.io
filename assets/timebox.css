@@ -144,16 +144,16 @@
 }
 
 .timebox-page .timebox-button--secondary {
-  background: rgba(12, 102, 244, 0.08);
-  border-color: rgba(12, 102, 244, 0.2);
-  color: var(--timebox-blue-ink);
+  background: var(--color-action-blue);
+  border-color: var(--color-action-blue);
+  color: #ffffff;
 }
 
 .timebox-page .timebox-button--secondary:hover,
 .timebox-page .timebox-button--secondary:focus-visible {
-  background: rgba(12, 102, 244, 0.16);
-  border-color: rgba(12, 102, 244, 0.34);
-  color: #083892;
+  background: var(--color-action-blue-hover);
+  border-color: var(--color-action-blue-hover);
+  color: #ffffff;
   transform: translateY(-1px);
 }
 
